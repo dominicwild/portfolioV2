@@ -8,9 +8,14 @@
 
   color: white;
 
-  h1 {
-    margin: 0;
-    font-weight: 100;
+  position: relative;
+
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    top: 0;
+    left: 0;
   }
 
   .bannerContainer {
@@ -58,7 +63,7 @@
           flex-grow: 1;
           justify-content: left;
           align-items: end;
-          
+
           border-bottom: 1px solid white;
         }
 

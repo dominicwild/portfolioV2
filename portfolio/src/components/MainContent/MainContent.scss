@@ -1,6 +1,8 @@
 .main-content {
   background-color: rgb(233, 157, 57);
   height: 100px;
+  z-index: 1;
+  position: relative;
 
   h1 {
       margin: 0;
