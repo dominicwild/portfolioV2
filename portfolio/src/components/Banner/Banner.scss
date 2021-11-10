@@ -77,14 +77,28 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
+      align-items: start;
 
       flex: 1;
+      padding: 0 20px;
+      height: 100%;
 
-      h1 {
-        font-size: 3rem;
-        font-weight: 100;
-        margin: 0;
+      position: relative;
+      z-index: 100;
+
+      .skillsTitle {
+        width: 100%;
+        h1 {
+          font-size: 3rem;
+          margin: 0;
+        }
+      }
+
+      .skillsDetail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
       }
     }
   }

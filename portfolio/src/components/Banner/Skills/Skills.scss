@@ -1,0 +1,38 @@
+.skills-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .skill-item {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row;
+    padding: 10px;
+
+    border: solid white 1px;
+    border-radius: 0.75em;
+
+
+    
+
+    .skill-icon {
+      display: inline-block;
+      margin-right: 5px;
+
+      svg {
+        $size: 4em;
+        width: $size !important;
+        height: $size !important;
+
+        path {
+          fill: white !important;
+        }
+      }
+    }
+  }
+}

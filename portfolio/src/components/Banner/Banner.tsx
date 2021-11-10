@@ -1,6 +1,11 @@
 import React from 'react';
 import "./Banner.scss";
 import ParticlesBackdrop from './Particles/ParticlesBackdrop';
+import Skills from './Skills/Skills';
+
+    const icons = {
+        java: <ParticlesBackdrop />,
+    }
 
 const Banner = () => {
     return (
@@ -22,8 +27,11 @@ const Banner = () => {
                 </div>
 
                 <div className="skillsContainer">
-                    <div>
+                    <div className='skillsTitle'>
                         <h1>Skills</h1>
+                    </div>
+                    <div className="skillsDetail">
+                        <Skills />
                     </div>
                 </div>
 
