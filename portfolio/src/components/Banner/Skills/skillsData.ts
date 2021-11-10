@@ -1,12 +1,12 @@
 import { FunctionComponent } from 'react';
-import { AmazonwebservicesPlainWordmarkIcon, AzurePlainIcon, CakephpPlainIcon, CPlainIcon, CplusplusPlainIcon, CsharpPlainIcon, Css3PlainIcon, ErlangPlainIcon, Html5PlainIcon, JavascriptPlainIcon, MatlabPlainIcon, MysqlPlainIcon, PhpPlainIcon, PythonPlainIcon, ReactOriginalIcon,RPlainIcon, TypescriptOriginalIcon, TypescriptPlainIcon, UnityOriginalIcon, UnityOriginalWordmarkIcon } from 'react-devicons';
+import { AmazonwebservicesPlainWordmarkIcon, AzurePlainIcon, CakephpPlainIcon, CPlainIcon, CplusplusPlainIcon, CsharpPlainIcon, Css3PlainIcon, ErlangPlainIcon, Html5PlainIcon, JavaPlainIcon, JavascriptPlainIcon, MatlabPlainIcon, MysqlPlainIcon, PhpPlainIcon, PythonPlainIcon, ReactOriginalIcon,RPlainIcon, TypescriptOriginalIcon, TypescriptPlainIcon, UnityOriginalIcon, UnityOriginalWordmarkIcon } from 'react-devicons';
 
 interface Props extends React.SVGProps<SVGElement> {
     size?: number | string;
     color?: string;
   }
 
-interface SkillData {
+export interface SkillData {
     name: string;
     detail?: string;
     icon: React.FunctionComponent<Props>;
@@ -17,8 +17,7 @@ const skillsData: Array<SkillData> = [
         name: "React",
         detail: "Created small scale webpages (even this portfolio), webform with login using AWS Cognito and Lambda.",
         icon: ReactOriginalIcon
-    },
-    {
+    }, {
         name: "TypeScript",
         icon: TypescriptPlainIcon,
     }, {
@@ -40,7 +39,7 @@ const skillsData: Array<SkillData> = [
     }, {
         name: "Java",
         detail: "Created microservices in Spring boot, an IRC bot, some Java games and more projects.",
-        icon: JavascriptPlainIcon,
+        icon: JavaPlainIcon,
     }, {
         name: "C#",
         detail: "Created Unity Augmented Reality App using Vuforia, an IRC bot from scratch, windows automation",
@@ -65,7 +64,7 @@ const skillsData: Array<SkillData> = [
         icon: MatlabPlainIcon,
     }, {
         name: "CakePHP",
-        detail: "Developed a social networking site",
+        detail: "Developed a social networking site using CakePHP and MySQL on a LAMP stack.",
         icon: CakephpPlainIcon,
     }, {
         name: "PHP",
@@ -79,4 +78,11 @@ const skillsData: Array<SkillData> = [
     }
 ]
 
+skillsData.sort(bySkillsWithDetails());
+
+function bySkillsWithDetails(): ((a: SkillData, b: SkillData) => number) | undefined {
+    return (skill1, skill2) => (skill1.detail != undefined ? 0 : 1) - (skill2.detail != undefined ? 0 : 1);
+}
+
 export default skillsData;
+

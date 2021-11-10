@@ -1,7 +1,10 @@
 #tsparticles {
     height: inherit;
+    // position: relative;
+    // z-index: 0;
 
     canvas {
         height: inherit !important;
+        position: sticky !important;
     }
 }

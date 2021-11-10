@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
   height: 100%;
   flex-wrap: wrap;
@@ -14,15 +14,17 @@
     flex-flow: row;
     padding: 10px;
 
-    border: solid white 1px;
+    border: solid white 0.2em;
     border-radius: 0.75em;
 
+    background-color: rgba($color: #000000, $alpha: 0.2);
 
-    
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
 
     .skill-icon {
       display: inline-block;
-      margin-right: 5px;
 
       svg {
         $size: 4em;
@@ -33,6 +35,10 @@
           fill: white !important;
         }
       }
+    }
+
+    .skill-detail {
+      margin-left: 0.75em;
     }
   }
 }
