@@ -19,12 +19,19 @@
 
     background-color: rgba($color: #000000, $alpha: 0.2);
 
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     flex-grow: 1;
 
+    &.no-detail {
+      justify-content: center;
+    }
+
     .skill-icon {
       display: inline-block;
+      height: 64px;
+      justify-content: center;
+      align-items: center;
 
       svg {
         $size: 4em;

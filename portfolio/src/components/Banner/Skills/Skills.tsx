@@ -22,13 +22,12 @@ const SkillsContent = () => {
     return (
         <>
             {skillsData.map((skill, index) => {
-                const skillIconFlexGrow = skill.detail != undefined ? 1 : 0;
+                const noDetailClass = skill.detail == undefined ? "no-detail" : "";
                 return (
-                    <div className="skill-item" key={index}>
-                        <div>
-                            <div className='skill-icon' title={skill.name}>
-                                <skill.icon color="white" />
-                            </div>
+                    <div className={`skill-item ${noDetailClass}`} key={index}>
+
+                        <div className='skill-icon' title={skill.name}>
+                            <skill.icon color="white" />
                         </div>
 
 
