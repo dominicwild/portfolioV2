@@ -1,11 +1,10 @@
-import React, { FunctionComponent } from 'react';
-import { ReactOriginalIcon } from 'react-devicons';
+import React from 'react';
 import "./Skills.scss";
 import skillsData, { SkillData } from "./skillsData";
 
 const SkillDetail = ({ skill }: { skill: SkillData }) => {
     const { detail } = skill;
-    if (detail != undefined) {
+    if (detail !== undefined) {
         return (
             <div className="skill-detail">
                 {detail}
@@ -22,7 +21,7 @@ const SkillsContent = () => {
     return (
         <>
             {skillsData.map((skill, index) => {
-                const noDetailClass = skill.detail == undefined ? "no-detail" : "";
+                const noDetailClass = skill.detail === undefined ? "no-detail" : "";
                 return (
                     <div className={`skill-item ${noDetailClass}`} key={index}>
 

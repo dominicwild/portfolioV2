@@ -1,9 +1,7 @@
-import React from 'react';
 import Banner from '../Banner/Banner';
-import ParticlesBackdrop from '../Banner/Particles/ParticlesBackdrop';
 import MainContent from '../MainContent/MainContent';
-
 import "./Portfolio.scss";
+
 
 const Portfolio = () => {
     return (

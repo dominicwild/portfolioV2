@@ -1,6 +1,9 @@
+@use "../../master";
+
 .banner {
+  $defaultPadding: master.$defaultPadding;
   height: auto;
-  padding: 50px 50px 50px 100px;
+  padding: $defaultPadding $defaultPadding $defaultPadding 100px;
   padding-bottom: 10px;
 
   background: rgb(52, 63, 145);
@@ -64,7 +67,7 @@
         flex-grow: 1;
         .name {
           display: flex;
-          flex-grow: 1;
+          flex-grow: flex-start;
           justify-content: left;
           align-items: end;
 

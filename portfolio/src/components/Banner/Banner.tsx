@@ -3,10 +3,6 @@ import "./Banner.scss";
 import ParticlesBackdrop from './Particles/ParticlesBackdrop';
 import Skills from './Skills/Skills';
 
-    const icons = {
-        java: <ParticlesBackdrop />,
-    }
-
 const Banner = () => {
     return (
         <div className="banner">

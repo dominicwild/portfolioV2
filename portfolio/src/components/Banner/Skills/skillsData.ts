@@ -1,5 +1,4 @@
-import { FunctionComponent } from 'react';
-import { AmazonwebservicesPlainWordmarkIcon, AzurePlainIcon, CakephpPlainIcon, CPlainIcon, CplusplusPlainIcon, CsharpPlainIcon, Css3PlainIcon, ErlangPlainIcon, Html5PlainIcon, JavaPlainIcon, JavascriptPlainIcon, MatlabPlainIcon, MysqlPlainIcon, PhpPlainIcon, PythonPlainIcon, ReactOriginalIcon,RPlainIcon, TypescriptOriginalIcon, TypescriptPlainIcon, UnityOriginalIcon, UnityOriginalWordmarkIcon } from 'react-devicons';
+import { AmazonwebservicesPlainWordmarkIcon, AzurePlainIcon, CakephpPlainIcon, CPlainIcon, CplusplusPlainIcon, CsharpPlainIcon, Css3PlainIcon, ErlangPlainIcon, Html5PlainIcon, JavaPlainIcon, JavascriptPlainIcon, MatlabPlainIcon, MysqlPlainIcon, PhpPlainIcon, PythonPlainIcon, ReactOriginalIcon, RPlainIcon, TypescriptPlainIcon, UnityOriginalIcon } from 'react-devicons';
 
 interface Props extends React.SVGProps<SVGElement> {
     size?: number | string;
@@ -81,7 +80,7 @@ const skillsData: Array<SkillData> = [
 skillsData.sort(bySkillsWithDetails());
 
 function bySkillsWithDetails(): ((a: SkillData, b: SkillData) => number) | undefined {
-    return (skill1, skill2) => (skill1.detail != undefined ? 0 : 1) - (skill2.detail != undefined ? 0 : 1);
+    return (skill1, skill2) => (skill1.detail !== undefined ? 0 : 1) - (skill2.detail !== undefined ? 0 : 1);
 }
 
 export default skillsData;
