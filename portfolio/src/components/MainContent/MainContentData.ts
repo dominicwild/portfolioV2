@@ -1,4 +1,4 @@
-const NEW_LINE = "{newLine}"
+const NEW_LINE = "{newLine}";
 
 const mainContentDataRaw = [
   {
@@ -29,13 +29,24 @@ const mainContentDataRaw = [
         communication is the most dominant factor in any project.   
         `,
   },
+  {
+    title: "Projects",
+    description: `
+        Below are some of the projects I have worked on. One of those projects is this portfolio site. It is a recreation of
+        my first portfolio site. It is a single page application that uses React with Typescript. 
+        ${NEW_LINE}
+        My previous portfolio site used PHP, which isn't the best choice for a static website. So I want to recreate it using 
+        my new experience and learnings in React and software in general, along with a bit more of a modern design, among making
+        it portable.
+    `,
+  },
 ];
 
-const mainContentData = mainContentDataRaw.map(({title, description}) => {
-    return {
-        title,
-        description: description.split(NEW_LINE),
-    };
+const mainContentData = mainContentDataRaw.map(({ title, description }) => {
+  return {
+    title,
+    description: description.split(NEW_LINE),
+  };
 });
 
 export default mainContentData;
