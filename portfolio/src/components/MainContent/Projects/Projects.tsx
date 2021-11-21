@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import ExpandIcon from '../../Icons/ExpandIcon';
 import Expandable from '../../Util/Expandable/Expandable';
 import "./Projects.scss";
 import projects from "./ProjectsData";
@@ -7,14 +8,20 @@ import projects from "./ProjectsData";
 const COLLPASED_HEIGHT = 350;
 
 const Project = (project: typeof projects[0]) => {
+    const [expanded, setExpanded] = useState(false);
+
+    const toggleExpanded = () => {
+        setExpanded(!expanded);
+    };
+
     return (
         <div className='project'>
             <div className="project-media">
                 <img src={project.mediaLink} alt={project.title} />
             </div>
 
-            <Expandable>
-                <div className="project-body">
+            <Expandable expanded={expanded}>
+                <div className="project-body" onClick={toggleExpanded}>
                     <h1 className="project-title">
                         {project.title}
                     </h1>
@@ -29,10 +36,15 @@ const Project = (project: typeof projects[0]) => {
             </Expandable>
 
             <div className='project-date-started'>
-                {"Start Date: " + project.dateStarted.toLocaleString("en-GB", {
-                    month: 'long',
-                    year: "numeric"
-                })}
+                <div>
+                    {"Start Date: " + project.dateStarted.toLocaleString("en-GB", {
+                        month: 'long',
+                        year: "numeric"
+                    })}
+                </div>
+                <div className='expand-icon'>
+                    <ExpandIcon />
+                </div>
             </div>
         </div>
     )

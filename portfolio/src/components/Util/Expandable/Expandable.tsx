@@ -4,38 +4,32 @@ import "./Expandable.scss";
 interface ExpandableData {
     children: ReactChild;
     collapsedHeight?: number;
+    expanded: boolean;
 }
 
 const DEFAULT_COLLPASED_HEIGHT = 350;
 
-const Expandable = ({ children, collapsedHeight = DEFAULT_COLLPASED_HEIGHT }: ExpandableData) => {
-    const [height, setHeight] = useState(collapsedHeight);
-    const [expanded, setExpanded] = useState(false);
-    const projectBodyHeight = useRef(-1);
-    const projectBody = useRef<HTMLDivElement>(null);
+const Expandable = ({ children, collapsedHeight = DEFAULT_COLLPASED_HEIGHT, expanded }: ExpandableData) => {
+    let height = collapsedHeight;
+    const elementHeight = useRef(-1);
+    const element = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
-        if (projectBodyHeight.current === -1 && projectBody.current != null) {
-            projectBodyHeight.current = projectBody.current.scrollHeight;
+        if (elementHeight.current === -1 && element.current != null) {
+            elementHeight.current = element.current.scrollHeight;
         }
     })
 
-    const expandProject = (e: React.MouseEvent<HTMLInputElement>) => {
-        if (projectBody.current) {
-            if (expanded) {
-                setHeight(collapsedHeight);
-                setExpanded(false);
-            } else {
-                setHeight(projectBodyHeight.current);
-                setExpanded(true);
-            }
+    if (element.current) {
+        if (expanded) {
+            height = elementHeight.current;
         }
     }
 
     const classStateName = expanded ? "expanded" : "collapsed";
 
     return (
-        <div className={`expandable ${classStateName}`} onClick={expandProject} ref={projectBody} style={{ maxHeight: `${height}px` }}>
+        <div className={`expandable ${classStateName}`} ref={element} style={{ maxHeight: `${height}px` }}>
             {children}
         </div>
     );
