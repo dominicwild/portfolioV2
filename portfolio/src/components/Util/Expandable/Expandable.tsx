@@ -1,4 +1,4 @@
-import React, { PropsWithChildren, ReactChild, ReactElement, useLayoutEffect, useRef, useState } from 'react';
+import React, { ReactChild, useLayoutEffect, useRef, useState } from 'react';
 import "./Expandable.scss";
 
 interface ExpandableData {
@@ -9,7 +9,6 @@ interface ExpandableData {
 const DEFAULT_COLLPASED_HEIGHT = 350;
 
 const Expandable = ({ children, collapsedHeight = DEFAULT_COLLPASED_HEIGHT }: ExpandableData) => {
-
     const [height, setHeight] = useState(collapsedHeight);
     const [expanded, setExpanded] = useState(false);
     const projectBodyHeight = useRef(-1);
@@ -33,8 +32,10 @@ const Expandable = ({ children, collapsedHeight = DEFAULT_COLLPASED_HEIGHT }: Ex
         }
     }
 
+    const classStateName = expanded ? "expanded" : "collapsed";
+
     return (
-        <div className="expandable" onClick={expandProject} ref={projectBody} style={{ maxHeight: `${height}px` }}>
+        <div className={`expandable ${classStateName}`} onClick={expandProject} ref={projectBody} style={{ maxHeight: `${height}px` }}>
             {children}
         </div>
     );
