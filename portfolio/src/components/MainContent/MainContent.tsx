@@ -2,6 +2,8 @@ import React from "react";
 import BackgroundTexture from "./BackgroundTexture/BackgroundTexture";
 import mainContentData from "./MainContentData";
 import "./MainContent.scss";
+import Projects from "./Projects/Projects";
+import ReactMarkdown from "react-markdown";
 
 const MainContentBody = ({ data }: { data: typeof mainContentData }) => {
   return (
@@ -10,13 +12,9 @@ const MainContentBody = ({ data }: { data: typeof mainContentData }) => {
         data.map(({ title, description }) =>
           <>
             <h1>{title}</h1>
-            {
-              description.map((description) =>
-                <p>
-                  {description}
-                </p>
-              )
-            }
+            <ReactMarkdown>
+              {description}
+            </ReactMarkdown>
           </>
         )
       }
@@ -30,6 +28,7 @@ const MainContent = () => {
       <div className="main-content">
         <BackgroundTexture />
         <MainContentBody data={mainContentData} />
+        <Projects />
       </div>
     </>
   );
