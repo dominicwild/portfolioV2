@@ -31,7 +31,7 @@ dynamically create content, essentially a database as PHP arrays instead.
 This website will continue to grow over time as more projects get developed. At the moment the layout is fairly simple and I 
 plan to evolve it into something more visually appealing in the future as a passion project. Some usability improvements are 
 also planned.`,
-        dateStarted: new Date(Date.parse("Jul 2019")),
+        dateStarted: new Date(Date.parse("1 Jul 2019")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -67,7 +67,7 @@ The finished product was feature complete containing the following features:
 - HTML Email Notifications for various alerts (new events, comments, posts etc)
 - User Profiles
 - Search Function`,
-        dateStarted: new Date(Date.parse("Jan 2019")),
+        dateStarted: new Date(Date.parse("1 Jan 2019")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -85,7 +85,7 @@ abstract algorithms into code.
 
 Conclusion of the project involved a fault tolerant system able to keep track of stored files, their status, manage node or 
 operation failures and handle collisions.`,
-        dateStarted: new Date(Date.parse("Nov 2018")),
+        dateStarted: new Date(Date.parse("1 Nov 2018")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -110,7 +110,7 @@ with more Unity experience than me, they were a valuable source of learning.
 
 The conclusion of the project was a proof of concept AR application with voice assistant, hot spots, voice controls, audio 
 and video logs, animated historical scenes etc. that highlighted the future challenges such an application would face.`,
-        dateStarted: new Date(Date.parse("Oct 2018")),
+        dateStarted: new Date(Date.parse("1 Oct 2018")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -132,7 +132,7 @@ Building this system taught me a lot about machine learning and the processes th
 The conclusion of this project was an accurate classifier, maintaining 95% accuracy even for corpus only 20-40 words in size,
 needing 30,000-40,000 words to give stable predictions. This was all validated using 10 fold cross validation (tested only 
 with English, Czech, German and Solvenian ).`,
-        dateStarted: new Date(Date.parse("Oct 2018")),
+        dateStarted: new Date(Date.parse("1 Oct 2018")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -148,7 +148,7 @@ a group server communication protocol library to ensure atomic interactions, gua
 
 The project concluded with a robust and simple distributed auction system, giving me lots of experience in the challenges
 associated with design, architecture and programming distributed systems.`,
-        dateStarted: new Date(Date.parse("Nov 2017")),
+        dateStarted: new Date(Date.parse("1 Nov 2017")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -169,7 +169,7 @@ controlled packet flooding approach to mesh networks that came up in research.
 The conclusion of this project was that this approach is possible, however encountered strange patterns of high packet loss 
 in correlation to distance/physical network topology and therefore requires more thorough investigation from a physics 
 perspective.`,
-        dateStarted: new Date(Date.parse("Oct 2017")),
+        dateStarted: new Date(Date.parse("1 Oct 2017")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -198,7 +198,7 @@ problems early.
 
 The result was a game with a refined twin stick combat system. The game does however lack content to consider it a full fledged 
 game, however the baseline exists for this game to be developed into something official.`,
-        dateStarted: new Date(Date.parse("Oct 2016")),
+        dateStarted: new Date(Date.parse("1 Oct 2016")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -208,7 +208,7 @@ A basic project that was developed for fun entirely through Java. The Snooker ga
 orientated design and tackle the challenges associated with building a game (such as dealing with frames and game logic).
 
 The conclusion of this project is a fully implemented game of Snooker, tested for following all the rules correctly.`,
-        dateStarted: new Date(Date.parse("Apr 2016")),
+        dateStarted: new Date(Date.parse("1 Apr 2016")),
     },
 ];
 
