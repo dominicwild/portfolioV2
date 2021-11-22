@@ -46,7 +46,7 @@ const Project = (project: typeof projects[0]) => {
                         year: "numeric"
                     })}
                 </div>
-                <div className={`expand-icon`} style={{transform: `rotate(${arrowRotation}deg)`}}>
+                <div className={`expand-icon`}>
                     <ExpandIcon style={{transform: `rotate(${arrowRotation}deg)`}}/>
                 </div>
             </div>

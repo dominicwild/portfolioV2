@@ -8,7 +8,7 @@ interface ProjectData {
 }
 
 const randomMediaLink = "https://loremflickr.com/320/240?random=1";
-const getRandomInt = (max : number) => {
+const getRandomInt = (max: number) => {
     return Math.floor(Math.random() * max);
 }
 
@@ -111,7 +111,105 @@ with more Unity experience than me, they were a valuable source of learning.
 The conclusion of the project was a proof of concept AR application with voice assistant, hot spots, voice controls, audio 
 and video logs, animated historical scenes etc. that highlighted the future challenges such an application would face.`,
         dateStarted: new Date(Date.parse("Oct 2018")),
-    }
+    },
+    {
+        mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
+        title: "Language Classifier",
+        description: `
+A Natural Language Processing project using machine learning techniques to identify the language of a particular corpus of text.
+
+The classifier was made completely from scratch using Java, with no external machine learning libraries used. 
+Cross validation, frequency analysis and variable training set size methods were used to evaluate the effectiveness of the 
+technique implemented.
+
+My language identification system works on using rank-order n-gram statistics to predict a language. The output of my system 
+is a distance metric that determines how likely a piece of text is to be a particular target language. Implementation was based
+off of a research paper.
+
+Building this system taught me a lot about machine learning and the processes that need to be undertaken in order to process
+ data. It gave me experience of processing high volumes of data (300k sentences) and analysing that data to form conclusions.
+
+The conclusion of this project was an accurate classifier, maintaining 95% accuracy even for corpus only 20-40 words in size,
+needing 30,000-40,000 words to give stable predictions. This was all validated using 10 fold cross validation (tested only 
+with English, Czech, German and Solvenian ).`,
+        dateStarted: new Date(Date.parse("Oct 2018")),
+    },
+    {
+        mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
+        title: "Distributed Auction System",
+        description: `
+A distributed fault tolerant auction system made with Java. Featured a dynamic replication server, authentication mechanism, 
+encrypted data transmission, 5 step challenge response protocol.
+
+The project made strong use of Java RMI (remote method invocation) for communication between clients and servers. There were 
+distributed auction servers that had to keep up-to-date with the system as a whole to function correctly. JGroups was used as
+a group server communication protocol library to ensure atomic interactions, guarantee packet arrival, manage dead connections
+ etc.
+
+The project concluded with a robust and simple distributed auction system, giving me lots of experience in the challenges
+associated with design, architecture and programming distributed systems.`,
+        dateStarted: new Date(Date.parse("Oct 2018")),
+    },
+    {
+        mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
+        title: "Micro:bit Mesh",
+        description: `
+Micro:bit Mesh was a mesh network protocol I developed for the BBC Micro:bit. It was a feature added with the aim to teach kids
+ about the computing concept of networking, giving them a tool to play around with.
+
+The project involved very low level C/C++ programming using the Micro:bits run time called codal. This project stressed reading
+and understanding how, at a low level, embedded systems hardware could be manipulated to achieved the desired effects, working
+a lot with the Micro:bits radio. One of the biggest challenges I faced while doing this project was debugging the Micro:bits,
+as its difficult to know what programming logic/state each system was in. To aide in this, I made use of the Micro:bits
+LED's and serial I/O to print debug data.
+
+Feasibility tests, design, implementation and evaluation of the protocol was conducted. The protocol was based off Glossy, a
+controlled packet flooding approach to mesh networks that came up in research.
+
+The conclusion of this project was that this approach is possible, however encountered strange patterns of high packet loss 
+in correlation to distance/physical network topology and therefore requires more thorough investigation from a physics 
+perspective.`,
+        dateStarted: new Date(Date.parse("Oct 2018")),
+    },
+    {
+        mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
+        title: "Krooza: 2D Twin Stick Shooter",
+        description: `
+A game developed through the Java's JSFML library. This game was developed alongside some friends of mine. Art was made by a 
+friend and majority of the coding was done by me.
+
+The experience taught me a lot about the importance and effectiveness of object orientated design. Before development I made a 
+UML diagram to plan out the object design, with inheritance and along with how the code would flow, what particular classes and 
+objects should generally do, how the engine would work, any extra challenges we may face.
+
+The parts of the game I coded were:
+
+- The Game Engine
+- 4 Coordinated Enemy AI Types
+- Car Modification System (swap different tyres, weapons (primary and secondary weapons), armour, car skins)
+- Physics Engine
+- Rendering Engine
+- The Game's HUD
+- Two Game Modes (Hoard and Survival Mode)
+
+Working within a group also meant it was important to keep code well documented and commented. I therefore kept all code 
+commented and up to date. I scheduled regular communication and meetings to ensure we were making steady progress, catching 
+problems early.
+
+The result was a game with a refined twin stick combat system. The game does however lack content to consider it a full fledged 
+game, however the baseline exists for this game to be developed into something official.`,
+        dateStarted: new Date(Date.parse("Oct 2018")),
+    },
+    {
+        mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
+        title: "Snooker Pool Game",
+        description: `
+A basic project that was developed for fun entirely through Java. The Snooker game was used as a way to practice object 
+orientated design and tackle the challenges associated with building a game (such as dealing with frames and game logic).
+
+The conclusion of this project is a fully implemented game of Snooker, tested for following all the rules correctly.`,
+        dateStarted: new Date(Date.parse("Oct 2018")),
+    },
 ];
 
 projects.sort((a, b) => {
