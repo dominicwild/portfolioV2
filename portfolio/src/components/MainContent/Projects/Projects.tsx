@@ -1,11 +1,9 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import ExpandIcon from '../../Icons/ExpandIcon';
 import Expandable from '../../Util/Expandable/Expandable';
 import "./Projects.scss";
 import projects from "./ProjectsData";
-
-const COLLPASED_HEIGHT = 350;
 
 const Project = (project: typeof projects[0]) => {
     const [expanded, setExpanded] = useState(false);

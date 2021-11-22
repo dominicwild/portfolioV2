@@ -1,4 +1,4 @@
-import React, { ReactChild, useLayoutEffect, useRef, useState } from 'react';
+import React, { ReactChild, useLayoutEffect, useRef } from 'react';
 import "./Expandable.scss";
 
 interface ExpandableData {
