@@ -9,10 +9,14 @@ const COLLPASED_HEIGHT = 350;
 
 const Project = (project: typeof projects[0]) => {
     const [expanded, setExpanded] = useState(false);
+    const [arrowRotation, setArrowRotation] = useState(0);
 
     const toggleExpanded = () => {
         setExpanded(!expanded);
+        setArrowRotation(arrowRotation + 180);
     };
+
+    const expandedClassName = expanded ? "expanded" : "collapsed";
 
     return (
         <div className='project'>
@@ -42,8 +46,8 @@ const Project = (project: typeof projects[0]) => {
                         year: "numeric"
                     })}
                 </div>
-                <div className='expand-icon'>
-                    <ExpandIcon />
+                <div className={`expand-icon`} style={{transform: `rotate(${arrowRotation}deg)`}}>
+                    <ExpandIcon style={{transform: `rotate(${arrowRotation}deg)`}}/>
                 </div>
             </div>
         </div>
