@@ -25,7 +25,7 @@ const Project = (project: typeof projects[0]) => {
             </div>
 
             <Expandable expanded={expanded}>
-                <div className="project-body" onClick={toggleExpanded}>
+                <div className={`project-body ${expandedClassName}`} onClick={toggleExpanded}>
                     <h1 className="project-title">
                         {project.title}
                     </h1>

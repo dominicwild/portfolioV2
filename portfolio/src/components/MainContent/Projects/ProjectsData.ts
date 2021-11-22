@@ -41,7 +41,7 @@ This project was undertaken as part of my university placement. It involved deve
 full software development life cycle (Analyis, design, implementation, testing and evaluation). The company was facing some 
 internal social communication problems, no knew what events were happening or what their co-workers were up to. Initial 
 need-finding took place via interviews and a company wide questionnaire, data quantized, analyzed and requirements were derived,
- among a Minimum Viable Product (MVP) plan.
+among a Minimum Viable Product (MVP) plan.
 
 The requirements were designed and then implemented successfully, meeting the MVP. The project later went on to form part of 
 my dissertation designing an incremental development technique for Enterprise Social Networks. The ESN was made with CakePHP,
@@ -148,14 +148,14 @@ a group server communication protocol library to ensure atomic interactions, gua
 
 The project concluded with a robust and simple distributed auction system, giving me lots of experience in the challenges
 associated with design, architecture and programming distributed systems.`,
-        dateStarted: new Date(Date.parse("Oct 2018")),
+        dateStarted: new Date(Date.parse("Nov 2017")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
         title: "Micro:bit Mesh",
         description: `
 Micro:bit Mesh was a mesh network protocol I developed for the BBC Micro:bit. It was a feature added with the aim to teach kids
- about the computing concept of networking, giving them a tool to play around with.
+about the computing concept of networking, giving them a tool to play around with.
 
 The project involved very low level C/C++ programming using the Micro:bits run time called codal. This project stressed reading
 and understanding how, at a low level, embedded systems hardware could be manipulated to achieved the desired effects, working
@@ -169,7 +169,7 @@ controlled packet flooding approach to mesh networks that came up in research.
 The conclusion of this project was that this approach is possible, however encountered strange patterns of high packet loss 
 in correlation to distance/physical network topology and therefore requires more thorough investigation from a physics 
 perspective.`,
-        dateStarted: new Date(Date.parse("Oct 2018")),
+        dateStarted: new Date(Date.parse("Oct 2017")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -198,7 +198,7 @@ problems early.
 
 The result was a game with a refined twin stick combat system. The game does however lack content to consider it a full fledged 
 game, however the baseline exists for this game to be developed into something official.`,
-        dateStarted: new Date(Date.parse("Oct 2018")),
+        dateStarted: new Date(Date.parse("Oct 2016")),
     },
     {
         mediaLink: `${randomMediaLink}${getRandomInt(1000)}`,
@@ -208,7 +208,7 @@ A basic project that was developed for fun entirely through Java. The Snooker ga
 orientated design and tackle the challenges associated with building a game (such as dealing with frames and game logic).
 
 The conclusion of this project is a fully implemented game of Snooker, tested for following all the rules correctly.`,
-        dateStarted: new Date(Date.parse("Oct 2018")),
+        dateStarted: new Date(Date.parse("Apr 2016")),
     },
 ];
 
