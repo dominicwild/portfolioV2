@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
 import ExpandIcon from '../../Icons/ExpandIcon';
 import Expandable from '../../Util/Expandable/Expandable';
@@ -25,7 +25,7 @@ const Project = (project: typeof projects[0]) => {
     const expandedClassName = expanded ? "expanded" : "collapsed";
 
     return (
-        <div className='project'>
+        <div className='project' key={`${projectDescription}`}>
             <div className="project-media">
                 <img src={project.mediaLink} alt={project.title} />
             </div>
