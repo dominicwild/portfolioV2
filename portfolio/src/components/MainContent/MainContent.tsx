@@ -10,12 +10,12 @@ const MainContentBody = ({ data }: { data: typeof mainContentData }) => {
     <>
       {
         data.map(({ title, description }) =>
-          <>
+          <div key={`${title}${description}`}>
             <h1>{title}</h1>
             <ReactMarkdown>
               {description}
             </ReactMarkdown>
-          </>
+          </div>
         )
       }
     </>
